@@ -1,0 +1,10 @@
+version: '2'
+services:
+  postgres:
+    image: postgres:12.3
+    environment:
+      POSTGRES_USER: "wallet"
+      POSTGRES_PASSWORD: "wallet"
+      POSTGRES_DB: "wallet"
+    ports:
+      - 5432:5432
