@@ -29,6 +29,8 @@ data class Transfer(
         var datetime: LocalDateTime,
         @Enumerated(EnumType.STRING)
         var status: TransferStatus,
+        @Column(name = "tx_id")
+        var txId: Long,
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         var id: Long? = null

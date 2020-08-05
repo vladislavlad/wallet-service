@@ -2,10 +2,9 @@ package com.wallet.service.controller
 
 import com.wallet.service.dto.TransferDto
 import com.wallet.service.dto.TransferRequest
-import com.wallet.service.service.TransferService
+import com.wallet.service.service.TransferServiceImpl
 import org.springframework.data.domain.PageRequest
 import org.springframework.scheduling.annotation.Async
-import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping

@@ -17,7 +17,5 @@ data class Account(
         var balance: Long,
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        var id: Long? = null,
-        @Version
-        var version: Long? = null
+        var id: Long? = null
 )

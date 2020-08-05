@@ -1,5 +1,6 @@
 package com.wallet.service
 
+import com.wallet.service.dto.AccountConverter
 import org.modelmapper.ModelMapper
 import org.modelmapper.convention.MatchingStrategies.STRICT
 import org.springframework.context.annotation.Bean
@@ -18,6 +19,7 @@ class WalletConfig {
         modelMapper.configuration.matchingStrategy = STRICT
         modelMapper.configuration.isFieldMatchingEnabled = true
         modelMapper.configuration.isSkipNullEnabled = true
+        modelMapper.addConverter(AccountConverter())
         return modelMapper
     }
 }

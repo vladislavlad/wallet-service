@@ -1,7 +1,10 @@
 package com.wallet.service.service
 
-import com.wallet.service.repository.TransferRepository
-import org.modelmapper.ModelMapper
+import com.wallet.service.dto.AccountFullDto
+import org.springframework.data.domain.Pageable
 
-class AccountService(private val repository: TransferRepository, mapper: ModelMapper) {
+
+interface AccountService {
+
+    fun getAll(pageable: Pageable): List<AccountFullDto>
 }

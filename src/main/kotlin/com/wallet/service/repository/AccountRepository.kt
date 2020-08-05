@@ -7,5 +7,6 @@ import java.util.*
 
 @Repository
 interface AccountRepository : JpaRepository<Account, Long> {
-    fun findByNumber(number: String) : Optional<Account>
+
+    fun findByNumber(number: String): Optional<Account>
 }
