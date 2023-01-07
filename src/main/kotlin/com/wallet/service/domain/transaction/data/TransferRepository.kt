@@ -1,6 +1,5 @@
-package com.wallet.service.repository
+package com.wallet.service.domain.transaction.data
 
-import com.wallet.service.model.Transfer
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 

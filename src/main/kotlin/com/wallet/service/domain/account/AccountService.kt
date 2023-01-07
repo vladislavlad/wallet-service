@@ -1,6 +1,6 @@
-package com.wallet.service.service
+package com.wallet.service.domain.account
 
-import com.wallet.service.dto.AccountFullDto
+import com.wallet.service.domain.account.dto.AccountFullDto
 import org.springframework.data.domain.Pageable
 
 

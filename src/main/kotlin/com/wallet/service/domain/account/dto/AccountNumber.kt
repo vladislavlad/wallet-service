@@ -1,8 +1,8 @@
-package com.wallet.service.dto
+package com.wallet.service.domain.account.dto
 
-import javax.validation.Constraint
-import javax.validation.constraints.NotNull
-import javax.validation.constraints.Pattern
+import jakarta.validation.Constraint
+import jakarta.validation.constraints.NotNull
+import jakarta.validation.constraints.Pattern
 import kotlin.reflect.KClass
 
 /**
@@ -15,7 +15,7 @@ import kotlin.reflect.KClass
 @NotNull
 @Pattern(regexp = "^\\d{1,20}$")
 annotation class AccountNumber(
-        val message: String = "Invalid account number",
-        val groups: Array<KClass<out Any>> = [],
-        val payload: Array<KClass<out Any>> = []
+    val message: String = "Invalid account number",
+    val groups: Array<KClass<out Any>> = [],
+    val payload: Array<KClass<out Any>> = []
 )

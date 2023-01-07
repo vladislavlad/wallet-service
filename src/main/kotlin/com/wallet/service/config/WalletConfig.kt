@@ -1,6 +1,6 @@
-package com.wallet.service
+package com.wallet.service.config
 
-import com.wallet.service.dto.AccountConverter
+import com.wallet.service.domain.account.dto.AccountConverter
 import org.modelmapper.ModelMapper
 import org.modelmapper.convention.MatchingStrategies.STRICT
 import org.springframework.context.annotation.Bean

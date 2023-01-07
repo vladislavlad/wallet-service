@@ -1,7 +1,6 @@
-package com.wallet.service.controller
+package com.wallet.service.domain.account
 
-import com.wallet.service.dto.AccountFullDto
-import com.wallet.service.service.AccountService
+import com.wallet.service.domain.account.dto.AccountFullDto
 import org.springframework.data.domain.PageRequest
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -13,8 +12,10 @@ import org.springframework.web.bind.annotation.RestController
 class AccountController(private val accountService: AccountService) {
 
     @GetMapping
-    fun list(@RequestParam(defaultValue = "0") page: Int,
-             @RequestParam(defaultValue = "20") size: Int): List<AccountFullDto> {
+    fun list(
+        @RequestParam(defaultValue = "0") page: Int,
+        @RequestParam(defaultValue = "20") size: Int
+    ): List<AccountFullDto> {
         return accountService.getAll(PageRequest.of(page, size))
     }
 
