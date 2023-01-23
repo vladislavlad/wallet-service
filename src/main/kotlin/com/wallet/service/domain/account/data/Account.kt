@@ -9,7 +9,7 @@ import jakarta.persistence.Table
 
 @Entity
 @Table(name = "accounts")
-data class Account(
+class Account(
     @Column(name = "holder_name")
     var holderName: String,
     var number: String,

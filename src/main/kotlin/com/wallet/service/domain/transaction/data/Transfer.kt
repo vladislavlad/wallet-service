@@ -16,7 +16,7 @@ import java.time.LocalDateTime
 
 @Entity
 @Table(name = "transfer")
-data class Transfer(
+class Transfer(
     @ManyToOne
     @JoinColumn(name = "source_id")
     var source: Account? = null,
