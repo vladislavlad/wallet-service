@@ -1,16 +1,16 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	kotlin("jvm") version "1.8.22"
-	kotlin("plugin.jpa") version "1.8.22"
-	kotlin("plugin.allopen") version "1.8.22"
-	kotlin("plugin.spring") version "1.8.22"
-	id("org.springframework.boot") version "3.1.3"
-	id("io.spring.dependency-management") version "1.1.3"
+	kotlin("jvm") version "1.9.21"
+	kotlin("plugin.jpa") version "1.9.21"
+	kotlin("plugin.allopen") version "1.9.21"
+	kotlin("plugin.spring") version "1.9.21"
+	id("org.springframework.boot") version "3.2.0"
+	id("io.spring.dependency-management") version "1.1.4"
 }
 
 group = "com.wallet"
-version = "0.0.1-SNAPSHOT"
+version = "0.1.0"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
@@ -24,8 +24,8 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	implementation("org.flywaydb:flyway-core:9.16.0")
-	implementation("org.postgresql:postgresql:42.5.4")
+	implementation("org.flywaydb:flyway-core")
+	implementation("org.postgresql:postgresql")
 	implementation("org.modelmapper:modelmapper:3.1.1")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
@@ -39,7 +39,7 @@ allOpen {
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
-		freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=enable")
+		freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=all")
 		jvmTarget = "17"
 	}
 }
