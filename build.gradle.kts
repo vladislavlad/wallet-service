@@ -26,7 +26,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.flywaydb:flyway-core")
 	implementation("org.postgresql:postgresql")
-	implementation("org.modelmapper:modelmapper:3.1.1")
+	implementation("org.modelmapper:modelmapper:3.2.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
